@@ -6,13 +6,13 @@ I have also implemented the **queue** required for BFS.
 ## How to Run
 1. First, create the `dist` folder in the project directory:
 ```bash
-    mkdir -p dist
+mkdir -p dist
 ```
 2. Compile all source files and create the executable:
 ```bash
-    gcc -Iinclude src/*.c -o dist/traversal
+gcc -Iinclude src/*.c -o dist/traversal
 ```
 3. Run the program:
 ```bash
-    ./dist/traversal
+./dist/traversal
 ```
