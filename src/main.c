@@ -3,6 +3,7 @@
 #include "bfs.h"
 #include "queue.h"
 #include "matrix.h"
+#include "hashtable.h"
 
 int main(void)
 {
@@ -28,6 +29,35 @@ int main(void)
     makeVoid(3, 3, (int *)visited);
 
     bfs(0, 0, 3, 3, &head, &tail, (int *)matrix, (int *)visited);
+
+    initHashTable();
+
+    insert(10, 1);
+    insert(20, 2);
+    insert(30, 3);
+    insert(40, 4);
+    insert(50, 5);
+    insert(60, 6);
+    printf("%d\n", getEntry(10));
+    printf("%d\n", getEntry(20));
+    printf("%d\n", getEntry(30));
+    printf("%d\n", getEntry(40));
+    printf("%d\n", getEntry(50));
+    printf("%d\n", getEntry(60));
+
+    removeEntry(10);
+    removeEntry(20);
+    removeEntry(30);
+    removeEntry(40);
+    removeEntry(50);
+    removeEntry(60);
+
+    printf("%d\n", getEntry(10));
+    printf("%d\n", getEntry(20));
+    printf("%d\n", getEntry(30));
+    printf("%d\n", getEntry(40));
+    printf("%d\n", getEntry(50));
+    printf("%d\n", getEntry(60));
 
     return 0;
 }
