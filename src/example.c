@@ -4,6 +4,8 @@
 #include "queue.h"
 #include "matrix.h"
 #include "hashtable.h"
+#include <stdlib.h>
+#include "list.h"
 
 int main(void)
 {
@@ -58,6 +60,19 @@ int main(void)
     printf("%d\n", getEntry(40));
     printf("%d\n", getEntry(50));
     printf("%d\n", getEntry(60));
+
+    struct linkedlist *list1 = (struct linkedlist *)malloc(sizeof(struct linkedlist *));
+    list1->head = NULL;
+    list1->tail = NULL;
+
+    insertAtHead(&list1, 10);
+    insertAtHead(&list1, 20);
+    insertAtHead(&list1, 30);
+    insertAtTail(&list1, 40);
+    insertAtTail(&list1, 50);
+    insertAtHead(&list1, 60);
+
+    TraverseLinkedList(list1);
 
     return 0;
 }

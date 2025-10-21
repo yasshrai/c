@@ -10,9 +10,9 @@ mkdir -p dist
 ```
 2. Compile all source files and create the executable:
 ```bash
-gcc -Iinclude src/*.c -o dist/traversal
+gcc -Iinclude src/*.c -o dist/example
 ```
 3. Run the program:
 ```bash
-./dist/traversal
+./dist/example
 ```
