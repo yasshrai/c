@@ -65,14 +65,37 @@ int main(void)
     list1->head = NULL;
     list1->tail = NULL;
 
-    insertAtHead(&list1, 10);
-    insertAtHead(&list1, 20);
-    insertAtHead(&list1, 30);
+    insertAtTail(&list1, 10);
+    insertAtTail(&list1, 20);
+    insertAtTail(&list1, 30);
     insertAtTail(&list1, 40);
     insertAtTail(&list1, 50);
-    insertAtHead(&list1, 60);
-
+    insertAtTail(&list1, 60);
+    printf("\n");
     TraverseLinkedList(list1);
 
+    deleteFromList(&list1, 10);
+    printf("\n");
+    TraverseLinkedList(list1);
+    deleteFromList(&list1, 20);
+    printf("\n");
+    TraverseLinkedList(list1);
+    deleteFromList(&list1, 30);
+    printf("\n");
+    TraverseLinkedList(list1);
+    deleteFromList(&list1, 40);
+    printf("\n");
+    TraverseLinkedList(list1);
+    printf("\n");
+    TraverseLinkedList(list1);
+    deleteFromList(&list1, 50);
+    printf("\n");
+    TraverseLinkedList(list1);
+    deleteFromList(&list1, 60);
+    printf("\n");
+    TraverseLinkedList(list1);
+    insertAtHead(&list1, 10);
+    printf("\n");
+    TraverseLinkedList(list1);
     return 0;
 }

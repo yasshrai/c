@@ -68,3 +68,36 @@ void insertAtHead(struct linkedlist **list, int data)
         (*list)->head = newnode;
     }
 }
+
+void deleteFromList(struct linkedlist **list, int data)
+{
+    struct list_node *current = (*list)->head;
+    struct list_node *prev = NULL;
+    while (current != NULL)
+    {
+
+        if (current->data == data)
+        {
+            if (!prev)
+            {
+                struct list_node *temp = current->next;
+                (*list)->head = temp;
+                free(current);
+                return;
+            }
+            else
+            {
+                if (current->next == NULL)
+                {
+                    (*list)->tail = prev;
+                }
+                struct list_node *temp = current->next;
+                prev->next = temp;
+                free(current);
+                return;
+            }
+        }
+        prev = current;
+        current = current->next;
+    }
+}

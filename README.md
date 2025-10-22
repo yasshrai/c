@@ -1,6 +1,5 @@
-# BFS and DFS Matrix/Graph Implementation in C
-This Repo contains my implementation of some basic **Data Structure** and **algorithms** in C.  
-I have also implemented the **queue** required for BFS.
+# Data Structure and Algorithms Implementation in C
+This Repo contains my implementation of some basic **Data Structure** and **algorithms** in C. 
 
 ---
 ## How to Run

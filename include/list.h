@@ -38,4 +38,12 @@ void TraverseLinkedList(struct linkedlist *list);
  */
 void insertAtHead(struct linkedlist **list, int data);
 
+/**
+ * Delete First occurrence of a value  from the beginning (head) of the linked list.
+ *
+ * @param list  Pointer to the linked list
+ * @param data  Value to deleted
+ */
+void deleteFromList(struct linkedlist **list, int data);
+
 #endif
