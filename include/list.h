@@ -13,6 +13,7 @@ struct linkedlist
 {
     struct list_node *head;
     struct list_node *tail;
+    unsigned int length;
 };
 
 /**

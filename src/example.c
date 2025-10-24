@@ -64,6 +64,7 @@ int main(void)
     struct linkedlist *list1 = (struct linkedlist *)malloc(sizeof(struct linkedlist *));
     list1->head = NULL;
     list1->tail = NULL;
+    list1->length = 0;
 
     insertAtTail(&list1, 10);
     insertAtTail(&list1, 20);
@@ -73,29 +74,38 @@ int main(void)
     insertAtTail(&list1, 60);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
 
     deleteFromList(&list1, 10);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     deleteFromList(&list1, 20);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     deleteFromList(&list1, 30);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     deleteFromList(&list1, 40);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     deleteFromList(&list1, 50);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     deleteFromList(&list1, 60);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     insertAtHead(&list1, 10);
     printf("\n");
     TraverseLinkedList(list1);
+    printf("%d\n", list1->length);
     return 0;
 }

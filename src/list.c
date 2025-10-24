@@ -42,6 +42,7 @@ void insertAtTail(struct linkedlist **list, int data)
         newnode->prev = (*list)->tail;
         (*list)->tail = newnode;
     }
+    (*list)->length++;
 }
 
 void TraverseLinkedList(struct linkedlist *list)
@@ -67,6 +68,7 @@ void insertAtHead(struct linkedlist **list, int data)
         newnode->next = (*list)->head;
         (*list)->head = newnode;
     }
+    (*list)->length++;
 }
 
 void deleteFromList(struct linkedlist **list, int data)
@@ -82,7 +84,9 @@ void deleteFromList(struct linkedlist **list, int data)
             {
                 struct list_node *temp = current->next;
                 (*list)->head = temp;
+                (*list)->length--;
                 free(current);
+
                 return;
             }
             else
@@ -93,6 +97,7 @@ void deleteFromList(struct linkedlist **list, int data)
                 }
                 struct list_node *temp = current->next;
                 prev->next = temp;
+                (*list)->length--;
                 free(current);
                 return;
             }
