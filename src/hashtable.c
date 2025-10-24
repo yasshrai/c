@@ -13,7 +13,7 @@ struct Entry *entries[BUCKET];
  * @param key   The integer key to hash
  * @return      The hash value (index) corresponding to the key
  */
-static hashValue hashFunction(int key)
+static inline hashValue hashFunction(int key)
 {
     return (key * 31) % BUCKET;
 }
