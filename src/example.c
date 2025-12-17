@@ -80,7 +80,6 @@ int main(void)
     TraverseLinkedList(list1);
     printf("%d\n", list1->length);
 
-
     intVector *array = malloc(sizeof(intVector *));
     for (int i = 0; i < 10; i++)
     {
@@ -90,14 +89,34 @@ int main(void)
     {
         printf("%d\n", array->data[i]);
     }
-    floatVector *farray = malloc(sizeof(floatVector *));
-    for (int i = 0; i < 10; i++)
+    intVectorPop(array);
+    printf("array size :%d\n", array->size);
+    intVectorPop(array);
+    printf("array size :%d\n", array->size);
+    intVectorPop(array);
+    printf("array size :%d\n", array->size);
+    intVectorPop(array);
+    printf("array size :%d\n", array->size);
+    for (int i = 0; i < array->size; i++)
     {
-        floatVectorPush(farray, i * 10);
+        printf("%d\n", array->data[i]);
     }
-    for (int i = 0; i < 10; i++)
+    intVectorPop(array);
+    printf("array size :%d\n", array->size);
+
+    printf("array capacity %d\n", array->capacity);
+    for (int i = 0; i < 16; i++)
     {
-        printf("%f\n", farray->data[i]);
+        printf("%d\n", array->data[i]);
     }
+    // floatVector *farray = malloc(sizeof(floatVector *));
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     floatVectorPush(farray, i * 10);
+    // }
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     printf("%f\n", farray->data[i]);
+    // }
     return 0;
 }
