@@ -6,6 +6,10 @@
 #include "hashtable.h"
 #include <stdlib.h>
 #include "list.h"
+#include "dynamicarray.h"
+
+InitVector(intVector, int);
+InitVector(floatVector, float);
 
 int main(void)
 {
@@ -76,36 +80,24 @@ int main(void)
     TraverseLinkedList(list1);
     printf("%d\n", list1->length);
 
-    deleteFromList(&list1, 10);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    deleteFromList(&list1, 20);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    deleteFromList(&list1, 30);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    deleteFromList(&list1, 40);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    deleteFromList(&list1, 50);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    deleteFromList(&list1, 60);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
-    insertAtHead(&list1, 10);
-    printf("\n");
-    TraverseLinkedList(list1);
-    printf("%d\n", list1->length);
+
+    intVector *array = malloc(sizeof(intVector *));
+    for (int i = 0; i < 10; i++)
+    {
+        intVectorPush(array, i * 10);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d\n", array->data[i]);
+    }
+    floatVector *farray = malloc(sizeof(floatVector *));
+    for (int i = 0; i < 10; i++)
+    {
+        floatVectorPush(farray, i * 10);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%f\n", farray->data[i]);
+    }
     return 0;
 }
